@@ -133,7 +133,7 @@ summary:focus-visible {
   align-items: center;
   gap: 11px;
   font-family: var(--heading);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
   letter-spacing: -0.045em;
 }
@@ -147,7 +147,7 @@ summary:focus-visible {
   border-radius: 50%;
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: -0.05em;
 }
@@ -166,7 +166,7 @@ summary:focus-visible {
 .primary-navigation > a,
 .theme-toggle {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
   transition: color 150ms ease;
 }
 
@@ -215,7 +215,7 @@ summary:focus-visible {
   margin: 0 0 17px;
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   line-height: 1.7;
   text-transform: uppercase;
@@ -254,8 +254,8 @@ summary:focus-visible {
   max-width: 580px;
   margin: 25px 0 0;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.85;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .hero-actions {
@@ -266,7 +266,7 @@ summary:focus-visible {
 }
 
 .button {
-  min-height: 47px;
+  min-height: 51px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@ summary:focus-visible {
   padding: 0 17px;
   border: 1px solid var(--line);
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
@@ -309,6 +309,16 @@ summary:focus-visible {
   stroke-width: 1.4;
 }
 
+.download-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
 .hero-stack {
   display: flex;
   flex-wrap: wrap;
@@ -317,7 +327,7 @@ summary:focus-visible {
   margin-top: 43px;
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .hero-stack i {
@@ -328,14 +338,11 @@ summary:focus-visible {
 }
 
 .hero-visual {
-  width: min(100%, 590px);
+  width: min(100%, 520px);
+  min-height: 570px;
   justify-self: end;
   position: relative;
-  display: grid;
-  grid-template-columns: 1.1fr 0.76fr;
-  align-items: center;
-  gap: 13px;
-  padding: 0 14px 28px 0;
+  padding: 0 0 24px;
   perspective: 1100px;
   transform: rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg));
   transform-style: preserve-3d;
@@ -346,7 +353,7 @@ summary:focus-visible {
 .hero-visual::before {
   position: absolute;
   z-index: 4;
-  inset: 0 14px 28px 0;
+  inset: 0 0 24px;
   background: radial-gradient(
     circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
     rgb(255 255 255 / 13%),
@@ -373,6 +380,7 @@ summary:focus-visible {
 .portrait-frame {
   position: relative;
   height: clamp(400px, 43vw, 540px);
+  width: 100%;
   overflow: hidden;
   border: 1px solid var(--line);
   background: #20251e;
@@ -393,105 +401,50 @@ summary:focus-visible {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 30%;
-}
-
-.portrait-stack {
-  height: min(470px, calc(100% - 16px));
-  display: grid;
-  grid-template-rows: 1.15fr 0.85fr;
-  gap: 12px;
-  transform: translateZ(58px) rotateY(-2deg);
-}
-
-.portrait-secondary,
-.portrait-cutout {
-  position: relative;
-  min-height: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-}
-
-.portrait-secondary img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center 25%;
-}
-
-.portrait-cutout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  background:
-    radial-gradient(ellipse at 50% 20%, color-mix(in srgb, var(--accent) 23%, var(--surface-raised)), transparent 60%),
-    var(--surface-raised);
-}
-
-.portrait-cutout img {
-  width: 100%;
-  height: 82%;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
-.portrait-cutout span {
-  position: absolute;
-  right: 9px;
-  bottom: 8px;
-  left: 9px;
-  color: var(--text);
-  font-family: var(--mono);
-  font-size: 8px;
-  text-align: center;
-}
-
-.portrait-caption {
-  position: absolute;
-  z-index: 1;
-  right: 20px;
-  bottom: 17px;
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.portrait-caption span:first-child {
-  font-family: var(--heading);
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.portrait-caption span:last-child {
-  color: #d2d7cd;
-  font-family: var(--mono);
-  font-size: 9px;
+  object-position: center 22%;
 }
 
 .hero-note {
   position: absolute;
-  z-index: 2;
-  right: 2px;
-  bottom: 1px;
+  z-index: 3;
+  bottom: 0;
+  left: 3%;
+  width: min(68%, 330px);
   display: flex;
-  align-items: flex-start;
-  gap: 11px;
-  padding: 12px 15px;
-  border: 1px solid var(--line);
+  flex-direction: column;
+  gap: 12px;
+  padding: 17px 20px 19px;
+  border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--line));
   background: var(--surface);
   color: var(--text);
-  font-size: 10px;
-  line-height: 1.6;
+  line-height: 1.35;
   transform: translateZ(72px);
-  box-shadow: 0 14px 32px rgb(0 0 0 / 20%);
+  box-shadow: 0 20px 45px rgb(0 0 0 / 28%);
+}
+
+.note-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-note p {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: clamp(17px, 2vw, 23px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.28;
 }
 
 .note-line {
-  width: 2px;
-  height: 30px;
+  width: 16px;
+  height: 1px;
   background: var(--accent);
 }
 
@@ -499,7 +452,7 @@ summary:focus-visible {
 .mono-label {
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
 }
 
@@ -518,7 +471,7 @@ summary:focus-visible {
   gap: 10px;
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -557,8 +510,8 @@ summary:focus-visible {
   max-width: 540px;
   margin: 16px 0 0;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 .about-grid {
@@ -575,8 +528,8 @@ summary:focus-visible {
 .about-copy p {
   margin: 0 0 17px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 17px;
+  line-height: 1.8;
 }
 
 .text-link {
@@ -585,7 +538,7 @@ summary:focus-visible {
   gap: 9px;
   margin-top: 10px;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -605,7 +558,7 @@ summary:focus-visible {
 
 .architecture-header .eyebrow {
   margin: 0;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .architecture-item {
@@ -617,7 +570,7 @@ summary:focus-visible {
 .focus-label {
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -625,8 +578,8 @@ summary:focus-visible {
 .architecture-item p {
   margin: 11px 0 0;
   color: var(--text);
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 .architecture-item b {
@@ -639,7 +592,7 @@ summary:focus-visible {
   padding-top: 16px;
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .database-band {
@@ -671,8 +624,8 @@ summary:focus-visible {
   max-width: 390px;
   margin: 13px 0 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .database-detail {
@@ -689,15 +642,15 @@ summary:focus-visible {
 .database-detail h3 {
   margin: 0 0 8px;
   font-family: var(--heading);
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 700;
 }
 
 .database-detail p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .project-grid {
@@ -735,7 +688,7 @@ summary:focus-visible {
 .project-category {
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   text-align: right;
 }
 
@@ -796,7 +749,7 @@ summary:focus-visible {
   z-index: 1;
   color: var(--art-accent);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -819,7 +772,7 @@ summary:focus-visible {
   background: color-mix(in srgb, var(--surface) 72%, transparent);
   color: var(--text);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .project-art-arrow {
@@ -851,8 +804,8 @@ summary:focus-visible {
   min-height: 48px;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.75;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .project-focus {
@@ -864,16 +817,16 @@ summary:focus-visible {
 .project-focus p {
   margin: 7px 0 0;
   color: var(--text);
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .project-architecture {
   margin: 12px 0 0;
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 9px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 .tag-list {
@@ -891,15 +844,15 @@ summary:focus-visible {
   border: 1px solid var(--line);
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 8px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.35;
 }
 
 .project-details {
   margin-top: 15px;
   color: var(--muted);
-  font-size: 10px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .project-details summary {
@@ -935,7 +888,7 @@ summary:focus-visible {
   margin-top: auto;
   padding-top: 17px;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -972,7 +925,7 @@ summary:focus-visible {
 .case-content h3 {
   margin: 0;
   font-family: var(--heading);
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 600;
   letter-spacing: -0.035em;
 }
@@ -987,7 +940,7 @@ summary:focus-visible {
 .case-flow > div > span {
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -995,8 +948,8 @@ summary:focus-visible {
 .case-flow p {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 11px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .case-content .tag-list {
@@ -1012,54 +965,107 @@ summary:focus-visible {
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 16px;
 }
 
 .skill-card {
-  min-height: 244px;
-  padding: 23px 21px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  padding: 25px 23px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
   background: var(--surface);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 8%);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.skill-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent 76%);
+  content: "";
+  opacity: 0.6;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
 }
 
 .skill-card-featured {
-  background: var(--surface-raised);
+  grid-column: span 2;
+  background:
+    radial-gradient(ellipse at 100% 0, color-mix(in srgb, var(--accent) 9%, transparent), transparent 55%),
+    var(--surface-raised);
+}
+
+.skill-card-heading {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 13px;
+}
+
+.skill-card-code {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--line));
+  border-radius: 50%;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
 }
 
 .skill-card h3 {
-  margin: 17px 0 17px;
+  margin: 1px 0 6px;
   font-family: var(--heading);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 
-.skill-card ul {
-  display: grid;
-  gap: 12px;
+.skill-card-heading p {
   margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 9px;
+  margin: 23px 0 0;
   padding: 0;
   list-style: none;
 }
 
-.skill-card li {
+.skill-pill {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--page) 42%, var(--surface));
 }
 
-.skill-card li > span {
+.skill-pill-name {
   color: var(--text);
-  font-size: 10px;
-  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-.skill-card li small {
-  color: var(--quiet);
-  font-size: 9px;
-  line-height: 1.5;
+.skill-pill-detail {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .experience {
@@ -1105,7 +1111,7 @@ summary:focus-visible {
 .education-card h3 {
   margin: 0;
   font-family: var(--heading);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.025em;
 }
@@ -1113,7 +1119,7 @@ summary:focus-visible {
 .timeline-heading > span {
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .timeline-place {
@@ -1124,8 +1130,41 @@ summary:focus-visible {
 .timeline-item p {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.timeline-location {
+  margin-top: 3px !important;
+  color: var(--quiet) !important;
+  font-size: 13px !important;
+}
+
+.experience-details {
+  display: grid;
+  gap: 8px;
+  margin: 13px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-details li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-details li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: "";
 }
 
 .education-card {
@@ -1141,13 +1180,13 @@ summary:focus-visible {
 .education-card p {
   margin: 9px 0 20px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .education-location {
   color: var(--quiet);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .contact {
@@ -1175,8 +1214,8 @@ summary:focus-visible {
   max-width: 460px;
   margin: 18px 0 0;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .contact-actions {
@@ -1195,7 +1234,7 @@ summary:focus-visible {
   align-items: center;
   gap: 8px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 15px;
   transition: color 150ms ease;
 }
 
@@ -1225,13 +1264,13 @@ summary:focus-visible {
 .site-footer .brand-mark {
   width: 30px;
   height: 30px;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .site-footer > p,
 .copyright,
 .back-to-top {
-  font-size: 9px;
+  font-size: 13px;
 }
 
 .site-footer > p {
@@ -1257,10 +1296,6 @@ summary:focus-visible {
 
   .portrait-frame {
     height: 440px;
-  }
-
-  .portrait-stack {
-    height: 410px;
   }
 
   .about-grid {
@@ -1358,7 +1393,7 @@ summary:focus-visible {
   }
 
   .hero-lede {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .hero-stack {
@@ -1367,6 +1402,7 @@ summary:focus-visible {
 
   .hero-visual {
     width: min(100%, 560px);
+    min-height: min(118vw, 520px);
     justify-self: center;
     perspective: none;
     transform: none;
@@ -1383,7 +1419,6 @@ summary:focus-visible {
   }
 
   .portrait-frame,
-  .portrait-stack,
   .hero-note {
     transform: none;
   }
@@ -1392,12 +1427,10 @@ summary:focus-visible {
     height: min(118vw, 520px);
   }
 
-  .portrait-stack {
-    height: min(105vw, 480px);
-  }
-
   .hero-note {
-    right: 0;
+    bottom: 0;
+    left: 2%;
+    width: min(72%, 330px);
   }
 
   .scroll-cue {
@@ -1429,7 +1462,7 @@ summary:focus-visible {
   }
 
   .architecture-item p {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .database-content {
@@ -1492,8 +1525,12 @@ summary:focus-visible {
     padding: 18px 15px;
   }
 
+  .skill-card-featured {
+    grid-column: span 2;
+  }
+
   .skill-card h3 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .experience {
@@ -1546,19 +1583,17 @@ summary:focus-visible {
   }
 
   .hero-visual {
-    grid-template-columns: 1.05fr 0.72fr;
-    gap: 8px;
+    min-height: calc(118vw + 26px);
   }
 
   .hero-note {
-    gap: 8px;
-    padding: 9px 10px;
-    font-size: 9px;
+    gap: 9px;
+    padding: 13px 15px 14px;
   }
 
   .hero-stack {
     column-gap: 7px;
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .project-topline {
@@ -1572,6 +1607,10 @@ summary:focus-visible {
 
   .skill-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skill-card-featured {
+    grid-column: auto;
   }
 }
 
@@ -1596,7 +1635,6 @@ summary:focus-visible {
   }
 
   .portrait-frame,
-  .portrait-stack,
   .hero-note {
     transform: none;
   }

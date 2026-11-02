@@ -12,11 +12,12 @@ const navigation = [
 const projects = [
   {
     number: "01",
-    category: "Business platform",
+    category: "Inventory & resource management",
     title: "Billin",
     description:
-      "A multi-tenant business platform spanning ISP ticketing, financial-institution loan management, and IRMS.",
-    focus: "Enterprise workflows, backend business logic, and API integrations.",
+      "An Inventory and Resource Management System for Silk Innovations, supporting inventory tracking, order management, and resource allocation with real-time data and reporting.",
+    focus:
+      "Part of a multi-tenant platform with system capabilities spanning ISP ticketing, loan management, and IRMS.",
     stack: ["Laravel", "PHP", "Multi-tenant systems", "API integration"],
     visual: {
       eyebrow: "Connected business systems",
@@ -26,7 +27,8 @@ const projects = [
       href: "https://billin.space/",
       label: "Visit Billin",
     },
-    note: "The platform’s scope is described here without claiming ownership of the entire product.",
+    note:
+      "IRMS capabilities include inventory tracking, order management, resource allocation, real-time data, and reporting.",
   },
   {
     number: "02",
@@ -86,93 +88,170 @@ const projects = [
     number: "05",
     category: "Business application",
     title: "Dur Dristi Digital ERP",
-    description: "An ERP / business application project.",
+    description:
+      "An ERP admin panel for managing users, payment records, and SMS messaging.",
     focus:
-      "Project-specific workflows, technologies, and individual contribution were not detailed in the supplied information.",
+      "Dynamic system design and detailed reports support day-to-day administration and decision-making.",
     stack: ["ERP", "Business applications"],
     visual: {
       eyebrow: "Enterprise application",
       labels: ["Workflows", "Business data"],
     },
-    note: "Details are intentionally limited until verified.",
+    link: {
+      href: "https://durdristidigital.com",
+      label: "Visit Dur Dristi Digital",
+    },
+    note: "The supplied project information describes the admin panel and its reporting and SMS capabilities.",
   },
   {
     number: "06",
     category: "Automotive application",
     title: "My Second Car",
-    description: "An automotive-related application project.",
+    description:
+      "A platform for browsing, booking, buying, and comparing new and second-hand cars.",
     focus:
-      "Project-specific functionality, technologies, and individual contribution were not detailed in the supplied information.",
-    stack: ["Automotive"],
+      "Includes EV charging-station information, a frontend API, and an admin panel with reports.",
+    stack: ["Automotive", "REST API", "Admin panel", "Reporting"],
     visual: {
       eyebrow: "Automotive application",
       labels: ["My Second Car"],
     },
-    note: "Details are intentionally limited until verified.",
+    link: {
+      href: "https://admin.seecar.silkinv.com",
+      label: "Open admin portal",
+    },
+    note:
+      "The supplied portal is an admin URL; it may require authorized access and is not presented as a public demo.",
   },
 ];
 
 const skillGroups = [
   {
     title: "Languages",
+    code: "01",
+    summary: "The languages I use to build and work across applications.",
     items: [
       ["PHP", "Strong practical experience"],
-      ["Go", "Practical backend experience"],
+      ["Go", "Practical backend development"],
       ["JavaScript", "Practical experience"],
       ["SQL", "Practical experience"],
-      ["HTML5 · CSS3 · Bash", "Working tools"],
+      ["HTML5 · CSS3 · Bash", "Working knowledge"],
       ["Java", "Basic working knowledge"],
     ],
   },
   {
     title: "Backend development",
+    code: "02",
+    summary: "Application structure, APIs, and server-side business logic.",
     items: [
       ["Laravel · PHP", "Primary backend foundation"],
-      ["Go · Gin · GORM", "Backend development"],
-      ["REST APIs · GraphQL integration", "API development & consumption"],
-      ["MVC · Repository · Service layer", "Application architecture"],
-      ["DTOs · validation · dependency injection", "Backend patterns"],
-      ["Multi-tenant systems · queues", "Business application concepts"],
+      ["Go · Gin · GORM", "Backend services"],
+      ["REST APIs · SOAP", "Development and integration"],
+      ["Multi-tenant systems · queues", "Business application patterns"],
     ],
   },
   {
     title: "Frontend development",
+    code: "03",
+    summary: "Building connected, reusable, and responsive interfaces.",
     items: [
       ["React · JavaScript", "Practical experience"],
       ["Laravel Blade", "Preferred within Laravel applications"],
       ["Vite · Tailwind CSS · React Query", "Project experience"],
       ["Reusable components · responsive UI", "Interface development"],
-      ["SVG · i18n · forms · API integration", "Frontend implementation"],
-      ["Next.js", "Learning / exploration"],
+      ["API integration · error handling", "Connected UI flows"],
+    ],
+  },
+  {
+    title: "Databases & data access",
+    code: "04",
+    summary: "Relational databases used across backend services and business applications.",
+    featured: true,
+    items: [
+      ["PostgreSQL", "Go services, GORM, and Silk Innovation applications"],
+      ["MySQL", "Laravel, eCommerce, enterprise systems, and troubleshooting"],
+      ["SQLite · SQL", "Queries, joins, filtering, and data management"],
+      ["GORM · Eloquent · PDO", "ORM and database access"],
+      ["DBeaver · MySQL CLI · SQLite CLI", "Database tools"],
     ],
   },
   {
     title: "Authentication & security",
+    code: "05",
+    summary: "Identity flows and API access across connected systems.",
     items: [
       ["JWT · refresh tokens · OTP", "Authentication flows"],
       ["Keycloak · JWKS", "Identity integration"],
       ["Issuer validation · public-key verification", "Token validation"],
-      ["Authorization · CORS · rate limiting", "API protection concepts"],
+      ["Authorization · CORS · rate limiting", "API security"],
     ],
   },
   {
-    title: "Infrastructure & tools",
+    title: "Infrastructure & development tools",
+    code: "06",
+    summary: "Practical tools for local development, deployment, and troubleshooting.",
     items: [
       ["Ubuntu · Linux · Docker", "Practical working experience"],
-      ["Nginx · Apache · SSH · SCP", "Server and deployment exposure"],
-      ["Git · GitHub · Postman · cURL", "Daily development tools"],
-      ["Composer · Laravel Artisan", "PHP ecosystem"],
-      ["DBeaver · MySQL CLI · SQLite CLI", "Database tools"],
-      ["OpenCode · IntelliJ IDEA", "Development environments"],
+      ["Nginx · Apache · SSH · SCP", "Server and deployment"],
+      ["Git · GitHub · Postman · cURL", "Development workflow"],
     ],
   },
   {
-    title: "Currently exploring",
+    title: "Learning & exploring",
+    code: "07",
+    summary: "Areas I’m actively learning, kept distinct from established skills.",
     items: [
       ["Advanced Go backend development", "Growing specialization"],
       ["Microservices · system design", "Ongoing learning"],
       ["Distributed systems · Next.js", "Exploration"],
     ],
+  },
+];
+
+const experience = [
+  {
+    role: "Fullstack Developer",
+    company: "FirstFintech Corporation Pvt. Ltd",
+    period: "Feb 2026 — Present",
+    location: "Panipokhari, Maharajgunj",
+    details: [
+      "Develop and maintain web applications using Laravel (PHP) and React.",
+      "Design REST APIs and integrate frontend applications with backend and third-party services.",
+      "Implement business logic, database operations, validation, and exception handling.",
+      "Work with PostgreSQL and MySQL for data design, queries, and management.",
+      "Integrate Java services with Laravel, including cross-platform token validation.",
+    ],
+  },
+  {
+    role: "Backend Developer",
+    company: "Mantra IT Solution Pvt. Ltd.",
+    period: "Jun 2025 — Feb 2026",
+    location: "Lalitpur",
+    details: [
+      "Built and maintained Laravel backend services and REST APIs for frontend and third-party integrations.",
+      "Developed eCommerce workflows for product catalogs, carts, checkout, orders, and inventory.",
+      "Implemented authentication, role-based access, validation, and data controls.",
+      "Worked with MySQL queries, performance tuning, bug fixes, and backend issue resolution.",
+    ],
+  },
+  {
+    role: "Backend Developer",
+    company: "Silk Innovation Pvt. Ltd",
+    period: "Jul 2024 — May 2025",
+    location: "Lalitpur",
+    details: [
+      "Developed Laravel REST APIs and web applications with PostgreSQL and Eloquent ORM.",
+      "Containerized Laravel applications and their dependencies with Docker.",
+      "Built a Go microservice, gaining foundational backend experience with Go.",
+      "Collaborated on task estimation, deadlines, version control, and problem solving.",
+    ],
+  },
+  {
+    role: "Backend Developer",
+    company: "Sajilopay Payment Services",
+    period: "Apr 2023 — Jul 2024",
+    location: "Kathmandu",
+    details: [],
   },
 ];
 
@@ -188,41 +267,41 @@ const caseStudies = [
       "Integrated JWKS-based public-key verification and issuer validation for the cross-platform authentication flow.",
     technologies: ["Java", "Laravel", "JWT", "JWKS"],
   },
+  // {
+  //   number: "02",
+  //   title: "EBI Internet Banking",
+  //   problem:
+  //     "A customer-facing banking frontend required consistent authentication, onboarding, and API-connected screens.",
+  //   investigation:
+  //     "Worked across shared interface patterns, request states, and localized UI.",
+  //   solution:
+  //     "Contributed to login and onboarding interfaces, reusable components, API integration, loading and error handling, and i18n.",
+  //   technologies: ["React", "Vite", "Tailwind CSS", "React Query", "JavaScript", "i18n"],
+  // },
+  // {
+  //   number: "03",
+  //   title: "Afghan Pay integrations",
+  //   problem:
+  //     "Banking workflows involved multiple service APIs and API Management / ESB integrations.",
+  //   investigation:
+  //     "Reviewed authentication headers, JSON payloads, user-service and communication APIs, notifications, wallet APIs, and statement-cycle requests during UAT.",
+  //   solution:
+  //     "Contributed to integration debugging and request analysis across the connected services.",
+  //   technologies: ["REST APIs", "JSON", "API Management", "ESB", "UAT"],
+  // },
+  // {
+  //   number: "04",
+  //   title: "Duplicate API error notifications",
+  //   problem:
+  //     "React application errors could trigger duplicate notifications.",
+  //   investigation:
+  //     "Traced the behavior through the shared API error handling and React Query integration.",
+  //   solution:
+  //     "Worked on the common notification path rather than adding one-off workarounds in individual screens.",
+  //   technologies: ["React", "React Query", "API error handling"],
+  // },
   {
     number: "02",
-    title: "EBI Internet Banking",
-    problem:
-      "A customer-facing banking frontend required consistent authentication, onboarding, and API-connected screens.",
-    investigation:
-      "Worked across shared interface patterns, request states, and localized UI.",
-    solution:
-      "Contributed to login and onboarding interfaces, reusable components, API integration, loading and error handling, and i18n.",
-    technologies: ["React", "Vite", "Tailwind CSS", "React Query", "JavaScript", "i18n"],
-  },
-  {
-    number: "03",
-    title: "Afghan Pay integrations",
-    problem:
-      "Banking workflows involved multiple service APIs and API Management / ESB integrations.",
-    investigation:
-      "Reviewed authentication headers, JSON payloads, user-service and communication APIs, notifications, wallet APIs, and statement-cycle requests during UAT.",
-    solution:
-      "Contributed to integration debugging and request analysis across the connected services.",
-    technologies: ["REST APIs", "JSON", "API Management", "ESB", "UAT"],
-  },
-  {
-    number: "04",
-    title: "Duplicate API error notifications",
-    problem:
-      "React application errors could trigger duplicate notifications.",
-    investigation:
-      "Traced the behavior through the shared API error handling and React Query integration.",
-    solution:
-      "Worked on the common notification path rather than adding one-off workarounds in individual screens.",
-    technologies: ["React", "React Query", "API error handling"],
-  },
-  {
-    number: "05",
     title: "Linux & production troubleshooting",
     problem:
       "Application and infrastructure issues ranged from dependency compatibility to connectivity and deployment configuration.",
@@ -349,14 +428,15 @@ function App() {
       <main id="main">
         <section className="hero section-shell" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="status-dot" /> Developer based in Nepal</p>
+            <p className="eyebrow"><span className="status-dot" /> Full-Stack Developer · Nepal</p>
             <h1 id="hero-title">
               Building reliable backend systems<span className="accent">.</span>
             </h1>
             <p className="hero-lede">
-              I’m Parbat Subedi, a backend-focused full-stack developer working
-              primarily with Laravel and PHP, with practical experience in Go,
-              React, PostgreSQL, MySQL, and enterprise API integrations.
+              I’m Parbat Subedi, a full-stack developer in Lalitpur, Nepal,
+              with a backend focus. I build web applications and APIs with
+              Laravel and PHP, and also work with Go services, React,
+              PostgreSQL, MySQL, and integrations between systems.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
@@ -369,6 +449,21 @@ function App() {
                 rel="noreferrer"
               >
                 GitHub <ArrowIcon diagonal />
+              </a>
+              <a
+                className="button button-secondary"
+                href="/cv/parbat-subedi.pdf"
+                download="Parbat-Subedi-CV.pdf"
+              >
+                Download CV
+                <svg
+                  aria-hidden="true"
+                  className="download-icon"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path d="M8 2.5v7m0 0 2.5-2.5M8 9.5 5.5 7M3 11v2h10v-2" />
+                </svg>
               </a>
             </div>
             <div className="hero-stack" aria-label="Primary technologies">
@@ -384,29 +479,13 @@ function App() {
             <div className="portrait-frame portrait-layer">
               <img
                 className="portrait-main"
-                src="/images/parbat-outdoors.jpeg"
-                alt="Parbat outdoors in Nepal"
+                src="/images/parbat-portrait.jpeg"
+                alt="Parbat Subedi outdoors in Nepal"
               />
-              <div className="portrait-caption">
-                <span>Parbat Subedi</span>
-                <span>Nepal · Software development</span>
-              </div>
-            </div>
-            <div className="portrait-stack portrait-layer">
-              <div className="portrait-secondary">
-                <img
-                  src="/images/parbat-mountains.jpeg"
-                  alt="Parbat with a mountain landscape in the background"
-                />
-              </div>
-              <div className="portrait-cutout">
-                <img src="/image/parbat.png" alt="" />
-                <span>Based in Nepal</span>
-              </div>
             </div>
             <div className="hero-note portrait-layer">
-              <span className="note-line" />
-              <span>Thoughtful systems.<br />Useful software.</span>
+              <span className="note-kicker"><span className="note-line" /> My approach</span>
+              <p>Thoughtful systems.<br />Useful software<span className="accent">.</span></p>
             </div>
           </div>
           <a className="scroll-cue" href="#about"><span /> Scroll to explore</a>
@@ -421,22 +500,22 @@ function App() {
           <div className="about-grid">
             <div className="about-copy">
               <p>
-                My foundation is in PHP and Laravel, building business
-                applications and backend workflows. Alongside that work, I use
-                Go for backend services and am growing my experience with
-                service-oriented systems.
+                I’m a full-stack developer with professional experience
+                dating back to 2023 and a strong backend focus. I build Laravel
+                applications and APIs, have worked with React on full-stack
+                projects, and have used Go for a microservice.
               </p>
               <p>
-                I have worked with relational data in PostgreSQL and MySQL,
-                connected applications across APIs, and contributed to
-                enterprise and banking integrations. On the frontend, I work
-                with React and Laravel Blade to build clear, reusable
-                interfaces.
+                My work has included PostgreSQL and MySQL, eCommerce
+                workflows, inventory and resource management, and connecting
+                Java and Laravel services. I care about clear API contracts,
+                maintainable code, and solving the underlying problem.
               </p>
               <p>
-                I’m a BCA graduate based in Nepal. I value maintainable
-                architecture, useful validation, consistent API contracts, and
-                finding the root cause instead of layering on workarounds.
+                I completed a Bachelor of Computer Application at Aadim
+                National SS/College. I’m based in Lalitpur, Nepal, and
+                continue to build my backend engineering experience with
+                practical, business-focused software.
               </p>
               <a className="text-link" href="#contact">Get in touch <ArrowIcon /></a>
             </div>
@@ -580,19 +659,27 @@ function App() {
         <section className="skills section-shell section-space" id="skills">
           <SectionHeading
             eyebrow="Tools of the trade"
-            title="A practical toolkit"
-            description="Grouped by the kind of work they support, not by arbitrary proficiency scores."
+            title="Technologies I work with"
+            description="A practical snapshot of my languages, frameworks, data tools, and the areas I’m currently exploring."
           />
           <div className="skill-grid">
             {skillGroups.map((group, index) => (
-              <article className={`skill-card${index === 0 ? " skill-card-featured" : ""}`} key={group.title}>
-                <span className="mono-label">0{index + 1}</span>
-                <h3>{group.title}</h3>
-                <ul>
+              <article
+                className={`skill-card${group.featured ? " skill-card-featured" : ""}`}
+                key={group.title}
+              >
+                <div className="skill-card-heading">
+                  <span className="skill-card-code">{group.code}</span>
+                  <div>
+                    <h3>{group.title}</h3>
+                    <p>{group.summary}</p>
+                  </div>
+                </div>
+                <ul className="skill-pills">
                   {group.items.map(([name, description]) => (
-                    <li key={name}>
-                      <span>{name}</span>
-                      <small>{description}</small>
+                    <li className="skill-pill" key={name}>
+                      <span className="skill-pill-name">{name}</span>
+                      <small className="skill-pill-detail">{description}</small>
                     </li>
                   ))}
                 </ul>
@@ -605,34 +692,32 @@ function App() {
           <SectionHeading
             eyebrow="Professional background"
             title="Experience & education"
-            description="A concise timeline, without inventing dates or responsibilities."
+            description="Backend and full-stack roles across payment services, software development, eCommerce, and financial technology."
           />
           <div className="experience-grid">
             <div className="timeline">
-              <article className="timeline-item">
-                <span className="timeline-dot" />
-                <div className="timeline-heading">
-                  <h3>Backend Developer</h3>
-                  <span>June 2025 — February 2026</span>
-                </div>
-                <p className="timeline-place">Egrow Tech Pvt. Ltd.</p>
-                <p>Backend development experience in a professional role.</p>
-              </article>
-              <article className="timeline-item">
-                <span className="timeline-dot" />
-                <div className="timeline-heading">
-                  <h3>Latest employer</h3>
-                  <span>Dates not provided</span>
-                </div>
-                <p className="timeline-place">Silk Innovation Private Ltd.</p>
-                <p>Role and responsibilities have not been added because they were not specified.</p>
-              </article>
+              {experience.map((position) => (
+                <article className="timeline-item" key={position.company}>
+                  <span className="timeline-dot" />
+                  <div className="timeline-heading">
+                    <h3>{position.role}</h3>
+                    <span>{position.period}</span>
+                  </div>
+                  <p className="timeline-place">{position.company}</p>
+                  <p className="timeline-location">{position.location}</p>
+                  {position.details.length > 0 && (
+                    <ul className="experience-details">
+                      {position.details.map((detail) => <li key={detail}>{detail}</li>)}
+                    </ul>
+                  )}
+                </article>
+              ))}
             </div>
             <div className="education-card">
               <span className="eyebrow">Education</span>
-              <h3>Bachelor of Computer Applications</h3>
-              <p>BCA graduate</p>
-              <span className="education-location">Nepal</span>
+              <h3>Bachelor in Computer Application</h3>
+              <p>Aadim National SS/College</p>
+              <span className="education-location">Jan 2019 — Nov 2024 · Kathmandu</span>
             </div>
           </div>
         </section>
@@ -644,14 +729,17 @@ function App() {
               <h2>Let’s talk about<br />what you’re building<span className="accent">.</span></h2>
               <p className="contact-copy">
                 For work enquiries or a conversation about backend systems and
-                business software, email is the best way to reach me.
+                business software, feel free to reach out.
               </p>
             </div>
             <div className="contact-actions">
               <a className="button button-primary" href="mailto:parbatsubedi000@gmail.com">
                 parbatsubedi000@gmail.com <ArrowIcon diagonal />
               </a>
-              <a href="https://www.linkedin.com/in/parbat-subedi-73a12319b/" target="_blank" rel="noreferrer">
+              <a href="tel:+9779843723270">
+                +977 9843723270 <ArrowIcon diagonal />
+              </a>
+              <a href="https://www.linkedin.com/in/parbatsubedi/" target="_blank" rel="noreferrer">
                 LinkedIn <ArrowIcon diagonal />
               </a>
               <a href="https://github.com/parbatsubedi" target="_blank" rel="noreferrer">
@@ -667,7 +755,7 @@ function App() {
           <span className="brand-mark">PS</span>
           <span>parbat subedi<span className="brand-period">.</span></span>
         </a>
-        <p>Backend-focused full-stack developer · Nepal</p>
+        <p>Full-Stack Developer · Tikathali-05, Lalitpur, Nepal</p>
         <a className="back-to-top" href="#top">Back to top ↑</a>
         <span className="copyright">© {new Date().getFullYear()} Parbat Subedi</span>
       </footer>
