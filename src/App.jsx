@@ -512,10 +512,11 @@ function App() {
                 maintainable code, and solving the underlying problem.
               </p>
               <p>
-                I completed a Bachelor of Computer Application at Aadim
-                National SS/College. I’m based in Lalitpur, Nepal, and
-                continue to build my backend engineering experience with
-                practical, business-focused software.
+                I completed my Bachelor of Computer Application at Aadim
+                National SS/College in 2024 and am pursuing a master’s degree
+                at Bhaktapur Multiple Campus, currently in my second semester.
+                I’m based in Lalitpur, Nepal, and continue to build my backend
+                engineering experience with practical, business-focused software.
               </p>
               <a className="text-link" href="#contact">Get in touch <ArrowIcon /></a>
             </div>
